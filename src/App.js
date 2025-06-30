@@ -15,7 +15,7 @@ function App() {
 
     const username = e.target.username.value.trim();
     const email = e.target.email.value.trim();
-    const phone = e.target.phone.value.trim(); // ID and name updated
+    const phone = e.target.phone.value.trim();
     const dob = e.target.dob.value;
 
     if (!username) {
@@ -26,7 +26,7 @@ function App() {
       alert("Invalid email");
     } else if (!phone) {
       alert("Invalid phone number");
-    } else if (phone.length !== 10) {
+    } else if (!/^\d{10}$/.test(phone)) {
       alert("Invalid phone number");
     } else if (!dob) {
       alert("Invalid date of birth");
