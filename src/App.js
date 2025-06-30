@@ -38,6 +38,7 @@ function App() {
   const handleCloseModal = () => {
     setIsOpen(false);
     setValidationError("");
+    setFormData({ username: "", email: "", phone: "", dob: "" });
   };
 
   const handleInputChange = (e) => {
@@ -89,14 +90,22 @@ function App() {
               &times;
             </span>
             <form onSubmit={handleSubmit}>
-              <label htmlFor="username">Username:</label>
-              <input type="text" id="username" onChange={handleInputChange} />
-              <label htmlFor="email">Email:</label>
-              <input type="email" id="email" onChange={handleInputChange} />
-              <label htmlFor="phone">Phone:</label>
-              <input type="text" id="phone" onChange={handleInputChange} />
-              <label htmlFor="dob">Date of Birth:</label>
-              <input type="date" id="dob" onChange={handleInputChange} />
+              <div className="input-group">
+                <label htmlFor="username">Username:</label>
+                <input type="text" id="username" onChange={handleInputChange} value={formData.username} />
+              </div>
+              <div className="input-group">
+                <label htmlFor="email">Email:</label>
+                <input type="email" id="email" onChange={handleInputChange} value={formData.email} />
+              </div>
+              <div className="input-group">
+                <label htmlFor="phone">Phone:</label>
+                <input type="text" id="phone" onChange={handleInputChange} value={formData.phone} />
+              </div>
+              <div className="input-group">
+                <label htmlFor="dob">Date of Birth:</label>
+                <input type="date" id="dob" onChange={handleInputChange} value={formData.dob} />
+              </div>
               <button type="submit" className="submit-button">
                 Submit
               </button>

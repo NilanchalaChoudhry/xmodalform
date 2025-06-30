@@ -20,24 +20,25 @@
 
 /* Modal content box */
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
+  background-color: #fff;
+  margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 90%;
   max-width: 400px;
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  border-radius: 10px;
 }
 
 /* Close button */
 .close {
   position: absolute;
-  top: 0;
-  right: 10px;
-  font-size: 28px;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
   font-weight: bold;
   color: #000;
   cursor: pointer;
@@ -50,46 +51,47 @@
   cursor: pointer;
 }
 
-/* Open button */
-.open-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+/* Input group */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
-.open-button:hover {
-  background-color: #45a049;
+/* Inputs */
+input {
+  font-size: 1rem;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-/* Submit button */
+/* Open and Submit Buttons */
+.open-button,
 .submit-button {
-  background-color: #4caf50;
+  background-color: #007bff;
   color: white;
   padding: 10px 15px;
   border: none;
-  cursor: pointer;
   border-radius: 5px;
-  margin-top: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
 }
 
+.open-button:hover,
 .submit-button:hover {
-  background-color: #45a049;
+  background-color: #0056b3;
 }
 
-/* Error message */
+/* Error Message */
 .error-message {
   color: red;
   margin-top: 5px;
 }
 
-/* Hide scrollbar when modal is open */
-body {
+/* Disable background scroll */
+body.modal-open {
   overflow: hidden;
-}
-
-.modal-open {
-  overflow: auto;
 }
