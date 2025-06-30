@@ -5,10 +5,8 @@
   padding: 0;
 }
 
-
-
+/* Modal backdrop */
 .modal {
-
   width: 100%;
   height: 100%;
   z-index: 10;
@@ -21,20 +19,19 @@
   align-items: center;
 }
 
-
+/* Modal content box */
 .modal-content {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 30%;
-  height: fit-content;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-
+/* Form styling */
 form {
   display: flex;
   flex-direction: column;
@@ -48,7 +45,7 @@ form {
   text-align: left;
 }
 
-
+/* Input fields */
 input {
   font-size: 1.2rem;
   padding: 8px;
@@ -56,7 +53,7 @@ input {
   border-radius: 4px;
 }
 
-
+/* Buttons */
 button {
   background-color: #007bff;
   color: white;

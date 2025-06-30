@@ -15,7 +15,7 @@ function App() {
 
     const username = e.target.username.value.trim();
     const email = e.target.email.value.trim();
-    const phone = e.target.phoneNo.value.trim();
+    const phone = e.target.phone.value.trim(); // ID and name updated
     const dob = e.target.dob.value;
 
     if (!username) {
@@ -57,8 +57,8 @@ function App() {
                 <input type="email" name="email" id="email" />
               </div>
               <div className="input-group">
-                <label htmlFor="phoneNo">Phone Number:</label>
-                <input type="text" name="phoneNo" id="phoneNo" />
+                <label htmlFor="phone">Phone Number:</label>
+                <input type="text" name="phone" id="phone" />
               </div>
               <div className="input-group">
                 <label htmlFor="dob">Date of Birth:</label>
